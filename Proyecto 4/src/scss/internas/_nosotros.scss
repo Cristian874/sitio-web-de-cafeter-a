@@ -1,0 +1,40 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.nosotros{
+margin-top: 10rem;
+
+
+    &__heading{
+        text-align: center;
+    }
+
+    &__grid{
+        margin-top: 5rem;
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem; 
+            
+            
+         }
+    }
+
+    &__imagen{
+        margin-bottom: 5rem;
+        @include m.tablet {
+            margin-bottom: 0; 
+            
+         }
+    }
+
+    &__txt{
+        text-align: center;
+        font-size: 1.8rem;
+
+        @include m.tablet {
+            text-align: left; 
+            
+         }
+    }
+}

@@ -1,0 +1,73 @@
+@use 'variables'as v;
+@use 'mixins' as m;
+
+.no__margin{
+    margin: 0;
+}
+
+.no__padding{
+    padding: 0;
+}
+
+.centrar__texto{
+    text-align: center;
+}
+
+
+.boton{
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+    transition-property: background-color;
+    transition-duration: .8s;
+     border: none;
+    &:hover{
+        cursor: pointer;
+        background-color: v.$hover;
+    }
+
+    @include m.tablet {
+        display: inline-block; 
+        
+     }
+}
+
+
+.error{
+    background-color: rgb(170, 83, 83);
+    color: v.$blanco;
+    width:100%;
+    margin: 0 auto;
+    padding: 1rem ;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.exito{
+    background-color: rgb(107, 122, 78);
+    color: v.$blanco;
+    width:100%;
+    margin: 0 auto;
+    padding: 1rem ;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.abajo{
+    position:fixed;
+    background-color:v.$colorPrimario;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 2rem;
+}

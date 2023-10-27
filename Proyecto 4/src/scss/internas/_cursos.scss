@@ -1,0 +1,57 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.cursos{
+    margin-top: 10rem;
+
+    &__grid{
+
+        
+        margin-top: 5rem;
+        border-bottom: .1rem solid v.$gris;
+        padding-bottom: 5rem;
+        
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem; 
+            align-items: center;
+         }
+    }
+
+
+    &__imagen{
+        overflow: hidden;
+       
+    }
+    &__img{
+        transition-property: transform;
+        transition-duration: .7s;
+     
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    &__title{
+        margin-bottom: 5rem;
+    }
+
+    &__precio,&__cupo{
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    &__span{
+        font-weight: 400;
+    }
+
+    &__boton{
+        background-color: v.$colorPrimario;
+        color: v.$blanco;
+        margin-top: 2rem;
+    }
+
+ 
+}
